@@ -71,7 +71,7 @@ function forecast() {
         $("#forecast-humidity").text(response.main.humidity);
         $("#forecast-temp").text(response.main.temp);
         $("#forecast-date").text(moment.unix(response.dt).format("(L)"));
-        $("#forecast-cloud-icon").attr("src", "http://openweathermap.org/img/w/" + response.weather[0].icon + ".png");
+        $("#forecast-cloud-icon").attr("src", "https://openweathermap.org/img/w/" + response.weather[0].icon + ".png");
         $("#forecast-windspeed").text(response.wind.speed);
 
         var long = response.coord.lon;
@@ -104,7 +104,7 @@ function forecast() {
                 newDiv.append(dateEL);
 
                 var iconEL = $("<img>");
-                iconEL.attr("src", "http://openweathermap.org/img/w/" + currListItem.weather[0].icon + ".png");
+                iconEL.attr("src", "https://openweathermap.org/img/w/" + currListItem.weather[0].icon + ".png");
                 iconEL.addClass("mx-auto ");
                 newDiv.append(iconEL);
 
