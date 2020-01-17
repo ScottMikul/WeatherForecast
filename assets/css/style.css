@@ -1,0 +1,19 @@
+.navbar-dark .navbar-brand{
+    color: white;
+}
+
+.bd-navbar{
+    background-color: black;
+}
+
+.bg-lightblue{
+    background-color: lightblue;
+}
+.fiveday{
+    background-color: blue;
+    color:white;
+}
+.searchbutton {
+    cursor:pointer;
+}
+

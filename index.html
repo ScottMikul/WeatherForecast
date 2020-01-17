@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- my css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- fontawesome cdn https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+
+    <!-- bootstrapjs / jquery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <!-- my javascript -->
+    <script defer src="assets/scripts/script.js"></script>
+
+    <!-- moment.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js"></script>
+
+</head>
+
+<body>
+    <header class="navbar navbar-dark flex-column bd-navbar">
+        <a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap">
+            Weather Dashboard
+        </a>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-md-3 bd-sidebar">
+                <form role="search" id="search-form" class="bd-search d-flex align-items-center">
+                    
+                    <div class="input-group mb-3 mt-2">
+                        <input id="search" type="text" class="form-control" placeholder="Search...">
+                        <div class="input-group-append bg-lightblue">
+                            <button type="submit" class="btn btn-outline-secondary" type="button" id="button-addon1"><i
+                                    class="fas fa-search "></i></button>
+                        </div>
+                    </div>
+                    <!-- "sandwich button" -->
+                    <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3 collapsed" type="button"
+                        data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav"
+                        aria-expanded="true"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                            viewBox="0 0 30 30" role="img" focusable="false">
+                            <title>Menu</title>
+                            <path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"
+                                d="M4 7h22M4 15h22M4 23h22"></path>
+                        </svg></button>
+                </form>
+
+                <nav class="d-md-none bd-links collapse" id="bd-docs-nav" >
+                    <div class="bd-toc-item ">
+                        <ul class="nav text-center flex-column " id="collapsable-search-history-buttons">
+                         
+                        </ul>
+                    </div>
+
+                </nav>
+                <nav class="d-none d-md-block" >
+                    <ul class="nav bd-sidenav text-center flex-column" id="medium-screen-search-history-buttons">
+ 
+                    </ul>
+
+                </nav>
+
+            </div>
+            <div class="col-12 col-md-9 mt-2">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div>
+                                    <h3 ><span id="forecast-city">&nbsp;</span><span id="forecast-date"></span><img id="forecast-cloud-icon" src="" alt="" srcset=""></h3>
+                                </div>
+                                <div >Temperature: &nbsp;<span id="forecast-temp"></span></div>
+                                <div >Humidity: &nbsp;<span id="forecast-humidity"></span></div>
+                                <div >Windspeed: &nbsp;<span id="forecast-windspeed"></span></div>
+                                <div>UV index: &nbsp;<span id="uv-index"></span></div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row mt-2">
+                    <div class="col-12 ">
+                        <div class="card">
+                            <div class="card-title">
+                                <h3 class="mt-2 ml-2">5 day forcast<h3>
+                            </div>
+
+                            <div class="d-md-flex justify-content-md-between">
+                                <div class="card m-1 ">
+                                    <div class="card-body fiveday">
+                                    </div>
+                                </div>
+                                <div class="card m-1 ">
+                                    <div class="card-body fiveday">
+                                    </div>
+                                </div>
+                                <div class="card m-1 ">
+                                    <div class="card-body fiveday">
+                                    </div>
+                                </div>
+                                <div class="card m-1 ">
+                                    <div class="card-body fiveday">
+                                    </div>
+                                </div>
+                                <div class="card m-1 ">
+                                    <div class="card-body fiveday">
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</body>
+
+</html>
